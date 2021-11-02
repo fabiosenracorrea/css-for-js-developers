@@ -18,6 +18,15 @@ Same as HEX colors, representing red, green and blue with 256 possible values. B
 
 One of the more interesting ways of representing a color. We combine the angle (representing a color in a color wheel) with the levels of saturation and lightness to achieve our color.
 
-Here's an example: `hsl(60deg, 100%, 50%)`. Here, if we wanted to tweak the color for a darker version, we could just adjust the lightness (3rd value) and quickly find the color we are looking for, without needing external tools for it.
+Here's an example: `hsl(60deg 100% 50%)`. Here, if we wanted to tweak the color for a darker version, we could just adjust the lightness (3rd value) and quickly find the color we are looking for, without needing external tools for it.
 
-**Important:** Because humans have different perceptions on colors depending on it's frequency, its hard to create an uniform representation with the same 'percepted' light. This can be seen if you contrast `hsl(234deg, 100%, 50%)` (dark-ish blue) to `hsl(50deg, 100%, 50%)` (yellow), which are opposed to each other on the 'color wheel' but seem to be at different lightness levels.
+**Important:** Because humans have different perceptions on colors depending on it's frequency, its hard to create an uniform representation with the same 'percepted' light. This can be seen if you contrast `hsl(234deg 100% 50%)` (dark-ish blue) to `hsl(50deg 100% 50%)` (yellow), which are opposed to each other on the 'color wheel' but seem to be at different lightness levels.
+
+
+## Transparency
+
+We can supply an additional channel to our color formats to specify our its opacity. Opacity values range from 0 to 1. Heres how to add it:
+
+* **HEX**: add an *prefix* double hex digit to the color. Full opacity would be #**FF**FF0000, while zero would be #*00**FF0000;
+* **RGB**: 'rgb' becomes 'rgba' and the last values are represented in percentages (or decimals). Eg: `rgba(255, 0, 0, 0.2)`;
+* **HSL**: add the representation at the end with an slash followed by the decimal 0-1 representation. Eg: `hsl(340deg 100% 50% / 0.75)`;
