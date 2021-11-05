@@ -1,6 +1,6 @@
 # Flow Layout
 
-By default, the rendering of elements with occur using the *Flow Layout*, which means *block* elements (h1, div, main, header...) are greedy and take up the whole available width of space, stacking up vertically, while *inline* elements (span, strong, img...) stack horizontally.
+By default, the rendering of elements with occur using the *Flow Layout*, which means *block* elements (h1, div, main, header...) are greedy and take up the whole available width of space (*not* to be confused with `width: 100%`. Block elements have `width: auto`, which means they will take the available space, not more), stacking up vertically, while *inline* elements (span, strong, img...) stack horizontally.
 
 Because of this, there is a set of rules that implicitly apply to them.
 
