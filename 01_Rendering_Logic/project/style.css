@@ -1,0 +1,80 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+:root {
+  --color-dark-gray: hsl(0deg, 0%, 30%);
+  --color-dark-light-gray: hsl(0deg, 0%, 40%);
+  --color-light-gray: hsl(0deg, 0%, 60%);
+  --color-green: hsl(160deg, 100%, 30%);
+  --color-white: hsl(0deg, 0%, 100%);
+  --color-gold: hsl(45deg, 100%, 50%);
+  --color-dark-gold: hsl(45deg, 100%, 40%);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+h1 {
+  color: var(--color-dark-gray);
+  margin-top: 40%;
+  margin-bottom: 40px;
+}
+
+.intro-chunk p {
+  color: var(--color-dark-light-gray);
+  margin-bottom: 24px;
+  font-size: 1.25rem;
+  max-width: 325px;
+}
+
+.intro-chunk p strong {
+  color: var(--color-green);
+}
+
+.max-width-wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.intro-chunk {
+  min-height: 100%;
+}
+
+.intro-chunk, .card {
+  padding: 8px 16px 24px;
+}
+
+main {
+  background-color: var(--color-light-gray);
+  min-height: 100%;
+  border-top: 8px solid var(--color-dark-light-gray);
+}
+
+h2 {
+  background-color: var(--color-gold);
+  color: var(--color-dark-gray);
+  border-bottom: 6px solid var(--color-dark-gold);
+  padding: 16px 24px;
+  margin-left: -24px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.card {
+  background-color: var(--color-white);
+  margin-top: 72px;
+  border-bottom: 6px solid var(--color-dark-light-gray);
+}
+
+.card p {
+  color: var(--color-light-gray);
+  margin-top: 16px;
+  line-height: 1.5erm;
+  font-size: 1.25rem;
+}
