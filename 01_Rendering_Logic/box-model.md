@@ -70,4 +70,4 @@ Despite using the `border-box` model, there is an important aspect to consider: 
 
 ## Margin to Center
 
-A common problem in the past, centering an HTML can be achieved by setting both it's side margins (left and right) to `auto`. This can be done to avoid tempering with flex/grid models, which mess with all the children of the container it has the property. But be aware, it will only work on the axial margins and on elements that have a *specified width*. Box elements (`display: box`) naturally span to full 'line width' so it works on them.
+A common problem in the past, centering an HTML can be achieved by setting both it's side margins (left and right) to `auto`. This can be done to avoid tempering with flex/grid models, which mess with all the children of the container it has the property. But be aware, it will only work on the axial margins and on elements that have a *specified width*. Box elements (`display: block`) naturally span to full 'line width' so it works on them.
