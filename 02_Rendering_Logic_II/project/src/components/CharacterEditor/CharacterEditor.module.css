@@ -50,12 +50,16 @@
 @media (max-width: 860px) {
   .header {
     max-width: 100%;
-    padding-bottom: 400px;
+    padding-bottom: 530px;
+  }
+
+  main {
+    min-height: 1150px;
   }
 
   .characterWrapper {
     top: 450px;
-    left: 50%;
+    left: 60%;
     transform: translateX(-50%);
     width: 80vw;
     right: unset;
@@ -70,6 +74,24 @@
     overflow-x: auto;
     position: relative;
     z-index: 1;
+    scrollbar-width: none;
+    scrollbar-color: rgb(203, 203, 203);
+  }
+
+  .controlColumn::-webkit-scrollbar {
+    height: 8px;
+    display: none;
+    width: 8px;
+  }
+
+  .controlColumn::-webkit-scrollbar-track {
+    background: white;
+  }
+
+  .controlColumn::-webkit-scrollbar-thumb {
+    background-color: rgb(203, 203, 203);
+    border-radius: 6px;
+    border: 2px solid rgb(203, 203, 203);
   }
 
   .controlColumn > div {
@@ -82,3 +104,9 @@
   }
 }
 
+@media (max-width: 460px) {
+  .header {
+    padding-bottom: 400px;
+  }
+
+}
