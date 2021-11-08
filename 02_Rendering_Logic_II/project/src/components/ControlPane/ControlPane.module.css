@@ -1,0 +1,46 @@
+.controlPane {
+  padding: 24px;
+  /* Optical centering */
+  padding-top: 18px;
+  background-color: white;
+  border-radius: 8px;
+  /*
+    HACK: Margin on an outer bound like this is
+    a little gross, but we haven't seen the tools
+    to deal with it yet!
+  */
+  margin-bottom: 32px;
+  overflow-x: auto;
+  white-space: nowrap;
+
+  scrollbar-width: thin;
+  scrollbar-color: rgb(203, 203, 203);
+}
+
+.controlPane::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+
+.controlPane::-webkit-scrollbar-track {
+  background: white;
+}
+
+.controlPane::-webkit-scrollbar-thumb {
+  background-color: rgb(203, 203, 203);
+  border-radius: 6px;
+  border: 2px solid rgb(203, 203, 203);
+}
+
+.title {
+  margin: 0;
+  /* Optical centering */
+  margin-bottom: -4px;
+}
+
+.metadata {
+  margin-left: 16px;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: hsl(0deg, 0%, 30%);
+}
