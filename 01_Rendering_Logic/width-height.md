@@ -4,7 +4,7 @@
 
 The default width of *block* elements. It will make the element span for all the available space, without breaking the parents length.
 
-I may seem like block elements have `width: 100%`, but that's quite not right. Try to paste this html snipped on a blank page to see the effect of it:
+It may seem like block elements have `width: 100%`, but that's quite not right. Try to paste this html snipped on a blank page to see the effect of it:
 
 ```html
 <html>
