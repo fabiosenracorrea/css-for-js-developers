@@ -1,2 +1,8 @@
 .buttonRow {
+  /*
+    This property is to ensure our visually hidden children
+    follow their buttons once we scroll, preventing them for
+    creating horizontal scroll on small screens
+  */
+  position: relative
 }
