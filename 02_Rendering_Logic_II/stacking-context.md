@@ -60,7 +60,7 @@ They can be *negative*, but introduces more complexity and won't be covered in t
 
 ## Stack Context
 
-A stacking context is a closed scope of elements z position! When inside a stacking context, an element can **never** break free out of it. This means that no matter how high its z-index inside that context is, if there's another stacking context on the page with a higher z-index, the element wont end up on top!
+A stacking context is a closed scope of all elements z positions! When inside a stacking context, an element can **never** break free out of it. This means that no matter how high its z-index inside that context is, if there's another stacking context on the page with a higher z-index, the element wont end up on top!
 
 Check this out:
 
@@ -148,11 +148,11 @@ There is also other ways of doing so:
 
 - Applying a mix-blend-mode other than normal
 
-- Adding a z-index to a child inside a display: flex or display: grid container
+- Adding a z-index to a child inside a `display: flex` or `display: grid` container
 
 - Using transform, filter, clip-path, or perspective
 
-- Explicitly creating a context with isolation: isolate (More on this soon!)
+- Explicitly creating a context with `isolation: isolate` (More on this soon!)
 
 [MDN specification](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)
 
@@ -162,15 +162,15 @@ First, this extension: [here](https://github.com/andreadev-it/stacking-contexts-
 
 ## Managing Z-Index
 
-FIghting "z-index wars" can be a real problem. Specially when the size of the application grows and more element are constantly added to the mix.
+Fighting "z-index wars" can be a real problem. Specially when the size of the application grows and more elements are constantly added to the mix.
 
 To avoid it, we can rely on the DOM order and creation of isolated stacking contexts.
 
 ### DOM Order
 
-If the elements we are trying to position are closed together (say, a card with decorative blobs around it), we can rely solely on DOM order to solve the stacking issue, the decorative images first and then our card, all with non-static position values!
+If the elements we are trying to position are closed together (say, a card with decorative blobs around it), we can rely solely on DOM order to solve the stacking issue, we put the decorative images first and then our card, all with non-static position values!
 
-> Be aware: When changing DOM order on elements that **do have tabbing interaction**, like links, inputs, buttons, changing their order can lead to un-wanted effects on tabbing. Pay attention to this when managing this.
+> Be aware: Changing DOM order on elements that **do have tabbing interaction**, like links, inputs, buttons, can lead to un-wanted effects on tabbing. Pay attention to this.
 
 ### Isolated stacking contexts
 

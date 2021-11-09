@@ -134,7 +134,7 @@ Notice how the box is perfectly centered at the middle of the screen! Try removi
 
 When setting our elements position, it will be calculated relative to it's containing block! Like mentioned before, this does not necessarily mean his direct parent. That is because __absolute elements can only be contained by *other* elements using the positioned layout__. If no element is found with this characteristics, it will look up the tree until it finds. If none is found, its set relative to the first containing block, which has the size of the viewport!
 
-And remember, the positioning the element, its padding don't apply. It will sit glued to the border!
+And remember, when positioning the element, its padding don't apply. It will sit glued to the border if `left: 0`!
 
 ## Fixed Position
 

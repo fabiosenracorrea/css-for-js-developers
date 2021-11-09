@@ -8,7 +8,7 @@ Defaults to `visible`
 
 When we set this to an element, it will gain a scrollbar in the direction its children overflows. It can be solely on the X or Y axis, or both!
 
-THat is why we can use the shorthand `overflow` property or the more specific `overflow-x` and `overflow-y`.
+That is why we can use the shorthand `overflow` property or the more specific `overflow-x` and `overflow-y`.
 
 > Attention: The looks of this can differ depending on your OS. A mac with a trackpad behaves differently than the same mac with a wired mouse
 
