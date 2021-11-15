@@ -7,16 +7,18 @@ import Select from './Select';
 
 export const ManagedSelect = () => {
   const [value, setValue] = React.useState('newest');
+  const options = [
+    { value: 'newest', displayName: 'Newest Releases' },
+    { value: 'price', displayName: 'Price' },
+    { value: 'curated', displayName: 'Curated' },
+  ]
   return (
     <Select
       label="Sort"
       value={value}
       onChange={(ev) => setValue(ev.target.value)}
-    >
-      <option value="newest">Newest Releases</option>
-      <option value="price">Price</option>
-      <option value="curated">Curated</option>
-    </Select>
+      options={options}
+    />
   );
 };
 

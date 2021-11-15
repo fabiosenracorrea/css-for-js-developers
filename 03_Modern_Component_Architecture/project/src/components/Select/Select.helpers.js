@@ -1,10 +1,7 @@
-import React from 'react';
-
-export function getDisplayedValue(value, children) {
-  const childArray = React.Children.toArray(children);
-  const selectedChild = childArray.find(
-    (child) => child.props.value === value
+export function getDisplayedValue(value, options) {
+  const selectedOption = options.find(
+    (option) => option.value === value
   );
 
-  return selectedChild.props.children;
+  return selectedOption.displayName;
 }
