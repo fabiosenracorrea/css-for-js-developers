@@ -1,5 +1,7 @@
 # Sole&Ankle — Module 4 workshop
 
+> Important: As recommended by the course, responsive design isn't focused on here. It'll be a later modification!
+
 In this workshop, our goal is to finish building an e-commerce store!
 
 The good news is, most of our work is done already. We just need to write some additional CSS to construct the layout; things are a bit messy right now!
@@ -14,18 +16,6 @@ This project uses Create React App. To get started, run the following terminal c
 You can then visit the app in-browser; it defaults to http://localhost:3000.
 
 _Note that we're only focusing on the design._ The links and inputs don't do anything.
-
-> **Want a bigger challenge?**
->
-> This workshop comes with a lot of starter code — we'll be adding
-> Flex-specific properties, but for the most part, we don't have a
-> ton of code to write. If you'd prefer, you can build the app from
-> scratch, to practice all the CSS we've learned so far!
->
-> If you go that route, you can find the sneaker assets you need in
-> `/public/assets`, and their metadata in `/src/data.js`. Design
-> tokens can be found in `/src/constants`. The custom font is
-> Raleway, from Google Fonts.
 
 ## Exercise 1: Superheader
 
