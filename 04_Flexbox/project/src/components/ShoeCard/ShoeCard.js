@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components/macro';
+import styled, { css } from 'styled-components/macro';
 
 import { COLORS, WEIGHTS } from '../../constants';
 import { formatPrice, pluralize, isNewShoe } from '../../utils';
@@ -54,14 +54,15 @@ const ShoeCard = ({
 
         <Row>
           <Name>{name}</Name>
-          <Price>{formatPrice(price)}</Price>
+          <Price $hasSale={!!salePrice}>{formatPrice(price)}</Price>
         </Row>
 
         <Row>
           <ColorInfo>{pluralize('Color', numOfColors)}</ColorInfo>
+          {salePrice && <SalePrice>{formatPrice(salePrice)}</SalePrice>}
         </Row>
 
-        {!!variantToText[variant] && <SalePrice $variant={variant}>{variantToText[variant]}</SalePrice>}
+        {!!variantToText[variant] && <Flag $variant={variant}>{variantToText[variant]}</Flag>}
       </Wrapper>
     </Link>
   );
@@ -90,6 +91,9 @@ const Image = styled.img`
 
 const Row = styled.div`
   font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
 `;
 
 const Name = styled.h3`
@@ -97,13 +101,23 @@ const Name = styled.h3`
   color: ${COLORS.gray[900]};
 `;
 
-const Price = styled.span``;
+const Price = styled.span`
+  ${({ $hasSale }) => $hasSale && css`
+    color: ${COLORS.gray[700]};
+    text-decoration: line-through;
+  `};
+`;
 
 const ColorInfo = styled.p`
   color: ${COLORS.gray[700]};
 `;
 
 const SalePrice = styled.span`
+  font-weight: ${WEIGHTS.medium};
+  color: ${COLORS.primary};
+`;
+
+const Flag = styled.span`
   font-weight: ${WEIGHTS.medium};
   color: ${COLORS.white};
   background-color: ${({ $variant }) => variantToBackgroundColor[$variant]};
