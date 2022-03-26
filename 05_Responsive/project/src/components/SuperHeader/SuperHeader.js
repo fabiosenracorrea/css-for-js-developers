@@ -33,7 +33,7 @@ const Wrapper = styled.div`
   padding-left: 32px;
   padding-right: 32px;
 
-  ${MEDIA.PHONE} {
+  ${MEDIA.TABLET} {
     height: 3px;
 
     & * {

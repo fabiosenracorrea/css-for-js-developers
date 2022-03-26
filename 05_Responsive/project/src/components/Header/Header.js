@@ -63,7 +63,7 @@ const MainHeader = styled.div`
   height: 72px;
   border-bottom: 1px solid ${COLORS.gray[300]};
 
-  ${MEDIA.PHONE} {
+  ${MEDIA.TABLET} {
     padding: 18px;
     align-items: center;
   }
@@ -74,7 +74,7 @@ const Nav = styled.nav`
   gap: 48px;
   margin: 0px 48px;
 
-  ${MEDIA.PHONE} {
+  ${MEDIA.TABLET} {
     display: none;
   }
 `;
@@ -86,7 +86,7 @@ const Side = styled.div`
 const MobileNav = styled.nav`
   display: none;
 
-  ${MEDIA.PHONE} {
+  ${MEDIA.TABLET} {
     display: flex;
     justify-content: flex-end;
 
